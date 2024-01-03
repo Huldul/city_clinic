@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use TCG\Voyager\Traits\Translatable;
 
 class Subdirection extends Model
 {
     use HasFactory;
+    use Translatable;
+    protected $translatable = ['title', 'main', 'image'];
     protected $fillable = ['title', 'slug', 'main', 'image'];
     public function direction() {
         return $this->belongsTo(Direction::class);

@@ -56,20 +56,21 @@
                 </svg>
             </button>
             <div class="header__lang">
-                <button class="lang-active" type="button">Рус</button>
-                <a href="{{ url('/changeru/' . ltrim(request()->path(), '/')) }}"><button type="button">Каз</button></a>
+                <a href="{{ url('/kz/changekz/' . ltrim(request()->path(), '/')) }}"><button type="button">Рус</button></a>
+                <button class="lang-active" type="button">Каз</button>
             </div>
         </div>
     </div>
     <div class="header__bottom">
-        <a href="/"><img src="/img/logo.png" alt="Логотип"></a>
+        <a href="/kz/"><img src="/img/logo.png" alt="Логотип"></a>
         <nav class="header__navigation navigation">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="/">Главная</a>
+                    <a href="/kz/">үй</a>
                 </li>
                 <li class="navigation__item sub-navigation">
-                    <a href="/directions">Направления</a>
+                    <a href="/kz/directions">
+                        Бағыттар</a>
                     <div class="sub-navigation__box">
                         <ul class="sub-navigation__list">
                             @foreach ($directions as $direction)
@@ -82,25 +83,25 @@
                     </div>
                 </li>
                 <li class="navigation__item">
-                    <a href="/specialists">Наши специалисты</a>
+                    <a href="/specialists">Біздің мамандар</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/prices">Цены</a>
+                    <a href="/kz/prices">Бағалар</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/blog">Блог</a>
+                    <a href="/kz/blog">Блог</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/about">О клинике</a>
+                    <a href="/kz/about">Клиника туралы</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/contacts">Контакты</a>
+                    <a href="/kz/contacts">Контактілер</a>
                 </li>
             </ul>
         </nav>
     </div>
     <div class="header__mobile">
-        <img src="/img/logo.png" alt="">
+        <img src="{{asset("/img/logo.png")}}" alt="">
         <div class="header__group">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -114,25 +115,26 @@
         <nav class="header__nav navigation">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="/">Главная</a>
+                    <a href="/kz/">үй</a>
                 </li>
                 <li class="navigation__item sub-navigation">
-                    <a href="/directions">Направления</a>
+                    <a href="/kz/directions">Бағыттар</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/specialists">Наши специалисты</a>
+                    <a href="/kz/specialists">Біздің мамандар</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/prices">Цены</a>
+                    <a href="/kz/prices">Бағалар</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/blog">Блог</a>
+                    <a href="/kz/blog">Блог</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/about">О клинике</a>
+                    <a href="/kz/about">
+                        Клиника туралы</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="/contacts">Контакты</a>
+                    <a href="/kz/contacts">Контактілер</a>
                 </li>
                 <div class="header__socials">
                     <a href="{{setting('contacts.instagram')}}">
